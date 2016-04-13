@@ -1,0 +1,69 @@
+@import "normalize.styl"
+@import "nib"
+
+// COLORS
+  // PALETA-A  http://www.colourlovers.com/palette/1473/Ocean_Five
+  celeste-A = #00A0B0
+  cafe-A = #6A4A3C
+  rojo-A = #CC333F
+  naranja-A = #EB6841
+  amarillo-A = #EDC951
+  // PALETA-B http://www.colourlovers.com/palette/4134684/Piece_Of_Heaven
+  celeste-B = #3C91E6
+  morado-B = #662E9B
+  rojo-B = #EA3546
+  naranja-B = #F86624
+  amarillo-B = #F9C80E
+  // OTHER COLORS
+  gris = #1E1E1E
+  celeste-claro = #00dbff
+// ///////////////////ELEMENTOS//////////////////////////////
+h1
+ul
+li
+figure
+  margin 0
+  padding 0
+a
+  text-decoration none
+// ///////////////////REUTILIZABLE//////////////////////////////
+.absolute
+  position absolute
+.list
+  list-style-type none
+
+.relative
+  position relative
+// ///////////////////HEADER//////////////////////////////
+.Header
+  &-head
+    display block
+    background rgba( gris, 0.85);
+    // #F5F5F5
+    color white
+    // background-image: url("../image/logo/fondo.png");
+    overflow hidden
+  &-img
+    display block
+    margin .4em auto
+  &-lema
+    top 2.3rem
+    text-align center
+    right 2rem
+    width 8em
+    color white
+    font-size 16px
+  &-nav
+    display block
+    padding .25em
+    background celeste-B
+    &-list
+      display flex
+      justify-content center
+    &-item
+      padding .5em
+      display block
+      a
+        color white
+
+// /////////////////////////////////////////////////////////
