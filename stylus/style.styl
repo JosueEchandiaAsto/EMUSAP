@@ -1,6 +1,10 @@
 @import "normalize.styl"
 @import "nib"
-
+@import "font.styl"
+@import "rslides.styl"
+@import url(https://fonts.googleapis.com/css?family=Slabo+27px);
+@import url(https://fonts.googleapis.com/css?family=Dosis);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 // COLORS
   // PALETA-A  http://www.colourlovers.com/palette/1473/Ocean_Five
   celeste-A = #00A0B0
@@ -17,6 +21,10 @@
   // OTHER COLORS
   gris = #1E1E1E
   celeste-claro = #00dbff
+// ///////////////////FUENTES//////////////////////////////
+  font1 = 'Slabo 27px', serif
+  font2 = 'Dosis', sans-serif
+  font3 = 'Roboto', sans-serif
 // ///////////////////ELEMENTOS//////////////////////////////
 h1
 ul
@@ -26,14 +34,20 @@ figure
   padding 0
 a
   text-decoration none
+body
+  height 80em
 // ///////////////////REUTILIZABLE//////////////////////////////
 .absolute
   position absolute
 .list
   list-style-type none
-
 .relative
   position relative
+.fixed-nav
+  position fixed
+  top 0
+  left 0
+  right 0
 // ///////////////////HEADER//////////////////////////////
 .Header
   &-head
@@ -52,18 +66,27 @@ a
     right 2rem
     width 8em
     color white
-    font-size 16px
   &-nav
     display block
+    z-index 999
     padding .25em
     background celeste-B
     &-list
       display flex
       justify-content center
     &-item
+      font-family font3
+      text-transform uppercase
+      // font-weight bold
       padding .5em
       display block
-      a
-        color white
+      color white
+    &-ico
+      margin-right .3em
 
-// /////////////////////////////////////////////////////////
+// ////////////////////SLIDES/////////////////////////////
+.rslides
+  background red
+  max-width 1000px
+  height auto
+  margin 0 auto

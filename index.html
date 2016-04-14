@@ -13,14 +13,53 @@
       </figure>
       <span class="Header-lema absolute"><em>"Trabajando por Abancay"</em></span>
     </div>
-    <nav class="Header-nav">
+    <nav class="Header-nav" id="nav">
       <ul class="Header-nav-list list">
-        <li class="Header-nav-item"><a href="#">Inicio</a></li>
-        <li class="Header-nav-item"><a href="#">Buen Gobierno</a></li>
-        <li class="Header-nav-item"><a href="#">Etc</a></li>
+        <li><a class="Header-nav-item" href="#">
+          <span class="Header-nav-ico icon-home"></span>
+          Inicio
+        </a></li>
+        <li><a class="Header-nav-item" href="#">
+          <span class="Header-nav-ico icon-books"></span>
+          Nosotros
+        </a></li>
+        <li><a class="Header-nav-item" href="#">
+          <span class="Header-nav-ico icon-library"></span>
+          Buen Gobierno
+        </a></li>
+        <li><a class="Header-nav-item" href="#">
+          <span class="Header-nav-ico icon-file"></span>
+          Comunicados
+        </a></li>
+        <li><a class="Header-nav-item" href="#">
+          <span class="Header-nav-ico icon-phone"></span>
+          Usuarios
+        </a></li>
+        <li><a class="Header-nav-item" href="#">
+          <span class="Header-nav-ico icon-search"></span>
+          Transparencia
+        </a></li>
+        <li><a class="Header-nav-item" href="#">
+          <span class="Header-nav-ico icon-pencil"></span>
+          Edu. Sanitaria
+        </a></li>
+        <li><a class="Header-nav-item" href="#">
+          <span class="Header-nav-ico icon-lock"></span>
+          Admin
+        </a></li>
       </ul>
     </nav>
   </header>
+  <section class="Slides">
+    <ul class="rslides sli">
+      <li><img src="image/slides/slides-1.png" alt=""></li>
+      <li><img src="image/slides/slides-2.png" alt=""></li>
+    </ul>
+    <ul class="sli_tabs">
+      <li>1</li>
+      <li>2</li>
+    </ul>
+  </section>
   <section class="Buttons">
     <a href="" class="Buttons-item">
       <figure>
@@ -73,5 +112,8 @@
 
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js" charset="utf-8"></script>
+  <script src="js/responsiveslides.min.js"></script>
+  <script $(".rslides").responsiveSlides();src="js/index.js" charset="utf-8"></script>
 </body>
 </html>
