@@ -3,7 +3,7 @@
   var nav = $('#nav'),
       scroll = $(window).scrollTop();
 
-  if (scroll >= 100) nav.addClass('fixed-nav');
+  if (scroll >= 112) nav.addClass('fixed-nav');
   else nav.removeClass('fixed-nav');
   });
 
@@ -13,6 +13,6 @@
     nav: true,
     speed: 500,
     maxwidth: 1000,
-    namespace: "sli"
-  });
+    namespace: "rslides-btns"
+  })
 })()
