@@ -146,8 +146,83 @@ body
       border-radius 1em
 
 // // ////////////////////MAIN/////////////////////////////
-// .Main
-//   background red
-//   height 10em
-// .Principal
-//
+.Main
+  margin-top .5em
+.Principal
+  width 44em
+  float right
+.Secundario
+  width 18em
+  float left
+.header
+  text-align center
+  padding .2em
+  color morado-B
+  font-weight bold
+  font-family font3
+  border-bottom 3px dashed morado-B
+  font-size 25px
+  .ico
+    margin-right .3em
+// // ////////////////////NOTICE/////////////////////////////
+.Notice
+  &-Articles
+    font-size 16px
+    padding .5em
+    &-item
+      margin 1em 0
+      display flex
+      flex-wrap wrap
+    &-title
+      display block
+      font-weight: 1500
+      color rojo-A
+      font-size 20px
+      padding-bottom .3em
+      &.fig
+        display none
+    &-text
+      font-family font3
+      width 27em
+      padding 0 .5em
+      .text
+        text-align justify
+    &-img
+      height 240px
+      order -1
+// // ////////////////////COMUNICATES/////////////////////////////
+.Comunicates
+  &-container
+    padding .5em
+    margin-top 1em
+    display flex
+    justify-content space-around
+  &-item
+    border 1px solid celeste-B
+    &-text
+      background rgba( black, .8)
+      display none
+      text-align center
+      padding 1em
+      font-family font3
+      color celeste-claro
+      top 0
+      left 0
+      right 0
+      bottom 0
+    &-title
+      padding 1rem 0
+      text-align center
+      font-size 20px
+    &-list
+      display inline-block
+      bottom 1em
+      right 1em
+      left 1em
+      color white
+      li
+        float left
+        font-size 25px
+        padding 9%
+    &:hover>&-text
+      display block
