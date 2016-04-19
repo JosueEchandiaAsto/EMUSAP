@@ -12,7 +12,7 @@
     pager: true,
     nav: true,
     speed: 500,
-    maxwidth: 1000,
+    maxwidth: 1100,
     namespace: "rslides-btns"
   })
 })()

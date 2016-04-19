@@ -22,6 +22,12 @@
   gris = #1E1E1E
   celeste-claro = #00dbff
   amarillo-claro = #FFA500
+  // PALETA-C http://www.colourlovers.com/palette/4217590/Wandering_Canadian
+  rojo-C = #EE4E82
+  rosado-C = #FD675A
+  naranja-C = #ff912f
+  verde-C = #bae43c
+  celeste-C = #4e9ff2
 // ///////////////////FUENTES//////////////////////////////
   font1 = 'Slabo 27px', serif
   font2 = 'Dosis', sans-serif
@@ -39,13 +45,14 @@ a
   text-decoration none
 body
   height 80em
+  background rgb(231, 231, 231)
 h2
 h3
   font-size 1em
   display inline-block
   font-weight normal
   &.bold
-    font-weight bold
+    font-weight normal
 // ///////////////////REUTILIZABLE//////////////////////////////
 .absolute
   position absolute
@@ -61,14 +68,19 @@ h3
 .container-large
   max-width 1000px
   margin 0 auto
+.white
+  background white
+.Body-container
+  max-width 1050px
+  margin 0 auto
 // ///////////////////HEADER//////////////////////////////
 .Header
   &-head
     display block
-    background rgba( gris, 0.85);
+    // background rgba( gris , 0.85)
     // #F5F5F5
-    color white
-    // background-image: url("../image/logo/fondo.png");
+    // background celeste-B
+    background-image: url("../image/footer/background.jpg");
     overflow hidden
   &-img
     display block
@@ -84,7 +96,7 @@ h3
     display block
     z-index 9999
     padding .25em
-    background celeste-B
+    background #5b5656
     &-list
       display flex
       justify-content center
@@ -99,6 +111,9 @@ h3
       margin-right .3em
 
 // ////////////////////SLIDES/////////////////////////////
+.Slides
+  margin-top 2px
+  max-width 1100px
 
 .rslides-btns
   &_nav
@@ -150,10 +165,15 @@ h3
   flex-wrap wrap
   &-item
     margin-bottom .5em
-    img
-      width 240px
-      height 100%
-      border-radius 1em
+    width 240px
+    height 100%
+    color white
+    text-align center
+    padding 1rem 0
+    border-radius 1em
+    background naranja-C
+    font-size 18px
+    font-family font3
 
 // // ////////////////////MAIN/////////////////////////////
 .Main
@@ -167,14 +187,29 @@ h3
   float left
 .header
   text-align center
-  padding .2em
-  color morado-B
+  padding .5em .2em
+  color white
+  // border-radius 1em
   font-weight bold
   font-family font3
-  border-bottom 3px dashed morado-B
-  font-size 25px
+  // border 3px solid celeste-C
+  font-size 22px
   .ico
     margin-right .3em
+.header
+.Buttons-item
+  &.green
+    background verde-C
+  &.rojo
+    background rojo-C
+  &.celeste
+    background celeste-C
+  &.rosado
+    background rosado-C
+  &.naranja
+    background naranja-C
+  .ico
+    margin-right .5em
 // // ////////////////////NOTICE/////////////////////////////
 .Notice
   &-Articles
@@ -187,7 +222,7 @@ h3
     &-title
       display block
       font-weight: 1500
-      color rojo-A
+      color celeste-B
       font-size 20px
       padding-bottom .3em
       &.fig
@@ -244,8 +279,7 @@ h3
 .Destacado
 .Contact
   .header
-    color rojo-B
-    border-bottom 3px dashed rojo-B
+    color white
   .ico
     font-size 20px
 .container-secundario
@@ -270,9 +304,19 @@ h3
 .Comment
   background-image url("../image/footer/footer.jpg")
   width 100%
-  // display none
   overflow hidden
   text-align center
+  &-expan
+    width .5em
+    height 2em
+    top 1em
+    left .5em
+    z-index 3
+    border-radius 5px
+    &-botton
+      border-top 1.5em solid amarillo-claro
+      border-left 1em solid transparent
+      border-right 1em solid transparent
   &-Title
     display inline-block
     text-align center
@@ -301,26 +345,42 @@ h3
       font-size 18px
 // // /////////////////////FOOTER/////////////////////////////
 .Footer
-  background-image url("../image/footer/footer.jpg")
-  background-color celeste-B
+  background-color #2C2C2C
   display flex
-  display none
+  left 0
+  right 0
+  align-items flex-start
   background-repeat no-repeat
   background-position center
   align-items center
   justify-content space-around
   flex-wrap nowrap
   padding 1em
-  &-Empresas
+  &-Acerca
     order -1
-    text-align center
+  &-Develop
+    order 1
+    max-width 15em
+    a
+      color white
+      margin-left .5em
   &-text
+    order 0
+  &-text
+  &-Acerca
+  &-Develop
     color white
-    text-align center
-    font-size 20px
+    max-width 20em
+    font-family: "calibri"
+    text-align justify
+    &-title
+      font-family font3
+      font-size 18px
+      color celeste-claro
     p
-      margin .5em 0
+      margin .4em 0
   &-Social
+    order 2
     &-red
       width 2em
       float left
