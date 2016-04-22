@@ -107,6 +107,10 @@ h3
       padding .5em
       display block
       color white
+      &-text
+        display inline-block
+        margin 0
+        padding 0
     &-ico
       margin-right .3em
 
@@ -119,15 +123,14 @@ h3
   &_nav
     z-index 3
     position absolute
-    top 43%
+    top 0
     left 0
     opacity 0.8
     text-indent -9999px
     overflow hidden
     text-decoration none
-    height 3.5em
-    width 2.1em
-    background transparent url("../image/themes.gif") no-repeat left top
+    height 100%
+    width 50%
     &.next
       left auto
       background-position right top
@@ -302,38 +305,30 @@ h3
     width 256px
 // // /////////////////////COMMENT/////////////////////////////
 .Comment
+  display none
   background-image url("../image/footer/footer.jpg")
+  // background rosado-C
   width 100%
   overflow hidden
   text-align center
-  &-expan
-    width .5em
-    height 2em
-    top 1em
-    left .5em
-    z-index 3
-    border-radius 5px
-    &-botton
-      border-top 1.5em solid amarillo-claro
-      border-left 1em solid transparent
-      border-right 1em solid transparent
   &-Title
-    display inline-block
     text-align center
+    display inline-block
   &-Form
     display inline-block
     text-align center
     padding 1em
+    width 30%
     .input
       color amarillo-claro
-      width 400px
+      width 100%
       border-radius 1em
       font-size 20px
       outline none
       display block
       border none
       padding .4em
-      margin 0 1rem 1rem 1rem
+      margin-bottom 1rem
     .send
       height 2em
       resize none
@@ -343,24 +338,28 @@ h3
       margin 0 auto
       padding .5em 2em
       font-size 18px
+  &.is-active
+    display block
+    top -270px
 // // /////////////////////FOOTER/////////////////////////////
 .Footer
-  background-color #2C2C2C
-  display flex
-  left 0
-  right 0
-  align-items flex-start
-  background-repeat no-repeat
-  background-position center
-  align-items center
-  justify-content space-around
-  flex-wrap nowrap
-  padding 1em
+  &-container
+    background-color #2C2C2C
+    display flex
+    left 0
+    right 0
+    align-items flex-start
+    background-repeat no-repeat
+    background-position center
+    align-items center
+    justify-content space-around
+    flex-wrap nowrap
+    padding 1em
   &-Acerca
     order -1
   &-Develop
     order 1
-    max-width 15em
+    width 13em
     a
       color white
       margin-left .5em
@@ -379,6 +378,27 @@ h3
       color celeste-claro
     p
       margin .4em 0
+  &-button
+    background amarillo-claro
+    top -1.5em
+    left 5px
+    padding .5em
+    color white
+    &.show-C
+    &.hide-C
+      display none
+      &.is-active
+        display block
+    .arriba
+      display inline-block
+      border-bottom .8em solid white
+      border-left .5em solid transparent
+      border-right .5em solid transparent
+    .abajo
+      display inline-block
+      border-top .8em solid white
+      border-left .5em solid transparent
+      border-right .5em solid transparent
   &-Social
     order 2
     &-red
@@ -392,3 +412,164 @@ h3
       float right
       img
         width 100px
+
+// ///////////////////////MEDIA///QUERY//TABLET///1024PX/////////////////////////////
+@media screen and (max-width: 1125px)
+  .Header
+    &-nav
+      &-item
+        &-text
+          &.text-1125px
+            display none
+@media screen and (max-width: 1070px)
+  .Header
+    &-nav
+      &-item
+        &-text
+          font-size 15px
+@media screen and (max-width: 1000px)
+  .Secundario
+    display none
+  .Principal
+    margin 0 auto
+    float none
+    width auto
+    max-width 50em
+  .Notice
+    &-Articles
+      &-text
+        margin 0 auto
+      &-img
+        margin 0 0 0 auto
+  .Header
+    &-nav
+      &-item
+        padding .5em 1.5rem
+        font-size 25px
+        &-text
+          display none
+  .Buttons
+    max-width 50em
+    &-item
+      width auto
+      padding 1rem
+
+  .Footer
+    &-Acerca
+      max-width 18em
+    &-Develop
+    &-text
+      max-width 13em
+      text-align center
+      &-title
+        &.center
+          text-align center
+@media screen and (max-width: 940px)
+  .Footer
+    &-container
+      justify-content space-around
+      flex-wrap wrap
+    &-text
+    &-Social
+      width 30%
+      text-align center
+    &-Develop
+    &-Acerca
+      width 50%
+      text-align justify
+    &-text
+    &-Social
+    &-Develop
+    &-Acerca
+      max-width none
+    &-Social
+      &-qr
+        display none
+      &-red
+        width auto
+        margin 0
+        float none
+    //   text-align center
+    //   max-width 30em
+    //   width auto
+    //   margin 0 auto
+  //   //   margin-bottom 1em
+  .Comment
+    &-Title
+      img
+        width 22em
+        margin-top .7em
+    &-Form
+      width 15em
+      font-size 20px
+    &.is-active
+      top -261px
+@media screen and (max-width: 750px)
+  .Buttons
+    &-item
+      width 40%
+@media screen and (max-width: 730px)
+  .Header
+    &-nav
+      display none
+    &-lema
+      display none
+  .Notice
+    &-Articles
+      &-img
+        order 1
+        margin 1em auto
+  .Comunicates
+    &-container
+      flex-wrap wrap
+    &-item
+      margin-bottom 1em
+  .Comment
+    // max-width 22.5em
+    border-top-left-radius 5%
+    border-top-right-radius 5%
+    &-Title
+      display block
+    &.is-active
+      left auto
+      right auto
+      top -454px
+    &-Form
+      .input
+        width 95%
+@media screen and (max-width: 520px)
+  .Buttons
+    margin .5em
+    max-width 25em
+    margin-left auto
+    margin-right auto
+    &-item
+      width 85%
+@media screen and (max-width: 450px)
+  .Footer
+    &-container
+      flex-direction column
+    &-text
+    &-Social
+    &-Develop
+    &-Acerca
+      margin-bottom .5em
+      width 80%
+      &-title
+        text-align left
+      text-align justify
+    &-Social
+      text-align center
+@media screen and (max-width: 380px)
+  .Comment
+    &-Title
+      img
+        width 320px
+    &-Form
+      width 90%
+      padding 0
+      .input
+        width 95%
+    &.is-active
+      top -430px
+      padding-bottom 2em
