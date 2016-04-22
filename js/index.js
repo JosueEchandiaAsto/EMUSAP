@@ -15,4 +15,21 @@
     maxwidth: 1100,
     namespace: "rslides-btns"
   })
+
+  var $Comment = $(".Comment")
+  var $buttonCommentshow = $(".show-C")
+  var $buttonCommenthide = $(".hide-C")
+
+  var showComment = function() {
+    $Comment.addClass("is-active")
+    $buttonCommenthide.addClass("is-active")
+  }
+  var hideComment = function() {
+    $Comment.removeClass("is-active")
+    $buttonCommenthide.removeClass("is-active")
+  }
+  $($buttonCommentshow).on("click",showComment)
+  $($buttonCommenthide).on("click",hideComment)
+
+
 })()
